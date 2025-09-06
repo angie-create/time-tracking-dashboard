@@ -89,6 +89,7 @@ class TimeTrackingDashboard {
   }
 
   formatHours(hours) {
+    if (hours === 0) return '0hr';
     return hours === 1 ? '1hr' : `${hours}hrs`;
   }
 
