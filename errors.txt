@@ -1,0 +1,8 @@
+desktop:
+the cards should be at the center of the screen and I see them at the bottom. See desktop.png and compare it with desktop-design.jpg
+
+tablet:
+the Daily, Weekly and Monthly appear at the right and they should be above report for Jeremy Robson, and also the numbers of the hours should be bigger. See tablet.png and compare it to tablet-design.jpg
+
+mobile:
+the "Last Week" should be at the right of the hours, and it is at the bottom. see mobile.png and compare it with mobile-design.jpg

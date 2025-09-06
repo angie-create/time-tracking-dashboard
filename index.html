@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body>
+  <main class="dashboard">
+    <!-- User Profile Card -->
+    <section class="profile-card">
+      <div class="profile-header">
+        <img src="./images/image-jeremy.png" alt="Jeremy Robson" class="profile-avatar">
+        <div class="profile-info">
+          <p class="profile-label">Report for</p>
+          <h1 class="profile-name">Jeremy Robson</h1>
+        </div>
+      </div>
+      
+      <nav class="time-selector" role="tablist" aria-label="Time period selection">
+        <button class="time-btn" data-timeframe="daily" role="tab" aria-selected="false">Daily</button>
+        <button class="time-btn active" data-timeframe="weekly" role="tab" aria-selected="true">Weekly</button>
+        <button class="time-btn" data-timeframe="monthly" role="tab" aria-selected="false">Monthly</button>
+      </nav>
+    </section>
+
+    <!-- Activity Cards Grid -->
+    <section class="activities-grid">
+      <!-- Work Card -->
+      <article class="activity-card work" data-activity="work">
+        <div class="activity-header">
+          <img src="./images/icon-work.svg" alt="" class="activity-icon" aria-hidden="true">
+        </div>
+        <div class="activity-content">
+          <div class="activity-title-row">
+            <h2 class="activity-title">Work</h2>
+            <button class="activity-menu" aria-label="More options for Work">
+              <img src="./images/icon-ellipsis.svg" alt="" aria-hidden="true">
+            </button>
+          </div>
+          <div class="activity-stats">
+            <p class="current-time" data-current>32hrs</p>
+            <p class="previous-time" data-previous>Last Week - 36hrs</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Play Card -->
+      <article class="activity-card play" data-activity="play">
+        <div class="activity-header">
+          <img src="./images/icon-play.svg" alt="" class="activity-icon" aria-hidden="true">
+        </div>
+        <div class="activity-content">
+          <div class="activity-title-row">
+            <h2 class="activity-title">Play</h2>
+            <button class="activity-menu" aria-label="More options for Play">
+              <img src="./images/icon-ellipsis.svg" alt="" aria-hidden="true">
+            </button>
+          </div>
+          <div class="activity-stats">
+            <p class="current-time" data-current>10hrs</p>
+            <p class="previous-time" data-previous>Last Week - 8hrs</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Study Card -->
+      <article class="activity-card study" data-activity="study">
+        <div class="activity-header">
+          <img src="./images/icon-study.svg" alt="" class="activity-icon" aria-hidden="true">
+        </div>
+        <div class="activity-content">
+          <div class="activity-title-row">
+            <h2 class="activity-title">Study</h2>
+            <button class="activity-menu" aria-label="More options for Study">
+              <img src="./images/icon-ellipsis.svg" alt="" aria-hidden="true">
+            </button>
+          </div>
+          <div class="activity-stats">
+            <p class="current-time" data-current>4hrs</p>
+            <p class="previous-time" data-previous>Last Week - 7hrs</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Exercise Card -->
+      <article class="activity-card exercise" data-activity="exercise">
+        <div class="activity-header">
+          <img src="./images/icon-exercise.svg" alt="" class="activity-icon" aria-hidden="true">
+        </div>
+        <div class="activity-content">
+          <div class="activity-title-row">
+            <h2 class="activity-title">Exercise</h2>
+            <button class="activity-menu" aria-label="More options for Exercise">
+              <img src="./images/icon-ellipsis.svg" alt="" aria-hidden="true">
+            </button>
+          </div>
+          <div class="activity-stats">
+            <p class="current-time" data-current>4hrs</p>
+            <p class="previous-time" data-previous>Last Week - 5hrs</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Social Card -->
+      <article class="activity-card social" data-activity="social">
+        <div class="activity-header">
+          <img src="./images/icon-social.svg" alt="" class="activity-icon" aria-hidden="true">
+        </div>
+        <div class="activity-content">
+          <div class="activity-title-row">
+            <h2 class="activity-title">Social</h2>
+            <button class="activity-menu" aria-label="More options for Social">
+              <img src="./images/icon-ellipsis.svg" alt="" aria-hidden="true">
+            </button>
+          </div>
+          <div class="activity-stats">
+            <p class="current-time" data-current>5hrs</p>
+            <p class="previous-time" data-previous>Last Week - 10hrs</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Self Care Card -->
+      <article class="activity-card self-care" data-activity="self-care">
+        <div class="activity-header">
+          <img src="./images/icon-self-care.svg" alt="" class="activity-icon" aria-hidden="true">
+        </div>
+        <div class="activity-content">
+          <div class="activity-title-row">
+            <h2 class="activity-title">Self Care</h2>
+            <button class="activity-menu" aria-label="More options for Self Care">
+              <img src="./images/icon-ellipsis.svg" alt="" aria-hidden="true">
+            </button>
+          </div>
+          <div class="activity-stats">
+            <p class="current-time" data-current>2hrs</p>
+            <p class="previous-time" data-previous>Last Week - 2hrs</p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

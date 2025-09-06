@@ -1,0 +1,514 @@
+/* Time Tracking Dashboard Styles */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+/* CSS Custom Properties (Design System) */
+:root {
+  /* Colors */
+  /* Primary */
+  --purple-600: hsl(246, 80%, 60%);
+  
+  /* Activity Colors */
+  --orange-300: hsl(15, 100%, 70%);
+  --blue-300: hsl(195, 74%, 62%);
+  --pink-400: hsl(348, 100%, 68%);
+  --green-400: hsl(145, 58%, 55%);
+  --purple-700: hsl(264, 64%, 52%);
+  --yellow-300: hsl(43, 84%, 65%);
+  
+  /* Neutral Colors */
+  --white: hsl(0, 100%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --navy-950: hsl(226, 43%, 10%);
+  --navy-900: hsl(235, 46%, 20%);
+  --navy-800: hsl(235, 41%, 34%);
+  --navy-200: hsl(236, 100%, 87%);
+  --purple-500: hsl(235, 45%, 61%);
+  --grey-200: hsl(0, 0%, 85%);
+  
+  /* Typography */
+  --font-family: 'Rubik', sans-serif;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  
+  /* Text Presets */
+  --text-preset-1: 56px;
+  --text-preset-2: 40px;
+  --text-preset-3: 32px;
+  --text-preset-4: 24px;
+  --text-preset-5: 18px;
+  --text-preset-6: 15px;
+  
+  /* Line Heights */
+  --line-height-1: 66px;
+  --line-height-2: 47px;
+  --line-height-3: 38px;
+  --line-height-4: 28px;
+  --line-height-5: 21px;
+  --line-height-6: 18px;
+  
+  /* Spacing */
+  --spacing-0: 0px;
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--navy-950);
+  color: var(--white);
+  font-size: var(--text-preset-5);
+  font-weight: var(--font-regular);
+  line-height: var(--line-height-5);
+  min-height: 100vh;
+}
+
+/* Typography Classes */
+.text-preset-1 {
+  font-size: var(--text-preset-1);
+  font-weight: var(--font-light);
+  line-height: var(--line-height-1);
+  letter-spacing: 0;
+}
+
+.text-preset-2 {
+  font-size: var(--text-preset-2);
+  font-weight: var(--font-light);
+  line-height: var(--line-height-2);
+  letter-spacing: 0;
+}
+
+.text-preset-3 {
+  font-size: var(--text-preset-3);
+  font-weight: var(--font-light);
+  line-height: var(--line-height-3);
+  letter-spacing: 0;
+}
+
+.text-preset-4 {
+  font-size: var(--text-preset-4);
+  font-weight: var(--font-light);
+  line-height: var(--line-height-4);
+  letter-spacing: 0;
+}
+
+.text-preset-5-medium {
+  font-size: var(--text-preset-5);
+  font-weight: var(--font-medium);
+  line-height: var(--line-height-5);
+  letter-spacing: 0;
+}
+
+.text-preset-5-regular {
+  font-size: var(--text-preset-5);
+  font-weight: var(--font-regular);
+  line-height: var(--line-height-5);
+  letter-spacing: 0;
+}
+
+.text-preset-6 {
+  font-size: var(--text-preset-6);
+  font-weight: var(--font-regular);
+  line-height: var(--line-height-6);
+  letter-spacing: 0;
+}
+
+/* Activity Color Classes */
+.work { --activity-color: var(--orange-300); }
+.play { --activity-color: var(--blue-300); }
+.study { --activity-color: var(--pink-400); }
+.exercise { --activity-color: var(--green-400); }
+.social { --activity-color: var(--purple-700); }
+.self-care { --activity-color: var(--yellow-300); }
+
+/* Utility Classes */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Layout - Mobile First */
+.dashboard {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--spacing-300);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+}
+
+/* Profile Card */
+.profile-card {
+  background-color: var(--navy-900);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.profile-header {
+  background-color: var(--purple-600);
+  padding: var(--spacing-400);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-200);
+  border-radius: 15px;
+}
+
+.profile-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid var(--white);
+  flex-shrink: 0;
+}
+
+.profile-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-label {
+  color: var(--navy-200);
+  font-size: var(--text-preset-6);
+  font-weight: var(--font-regular);
+  margin-bottom: var(--spacing-100);
+}
+
+.profile-name {
+  color: var(--white);
+  font-size: var(--text-preset-4);
+  font-weight: var(--font-light);
+  line-height: var(--line-height-4);
+  word-wrap: break-word;
+}
+
+/* Time Selector */
+.time-selector {
+  padding: var(--spacing-300) var(--spacing-400);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time-btn {
+  background: none;
+  border: none;
+  color: var(--purple-500);
+  font-family: var(--font-family);
+  font-size: var(--text-preset-5);
+  font-weight: var(--font-regular);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.time-btn:hover,
+.time-btn:focus {
+  color: var(--white);
+  outline: none;
+}
+
+.time-btn.active {
+  color: var(--white);
+}
+
+/* Activities Grid */
+.activities-grid {
+  display: grid;
+  gap: var(--spacing-300);
+  grid-template-columns: 1fr;
+}
+
+/* Activity Cards */
+.activity-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  min-height: 160px;
+}
+
+@media (min-width: 1024px) {
+  .activity-card {
+    min-height: 160px;
+  }
+}
+
+.activity-header {
+  background-color: var(--activity-color);
+  height: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 var(--spacing-200);
+  position: relative;
+  border-radius: 15px 15px 0 0;
+}
+
+.activity-icon {
+  width: 78px;
+  height: 78px;
+  position: absolute;
+  top: -10px;
+  right: 17px;
+  z-index: 1;
+}
+
+.activity-content {
+  background-color: var(--navy-900);
+  padding: var(--spacing-300);
+  margin-top: -5px;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 1024px) {
+  .activity-content {
+    height: 199px;
+    padding: var(--spacing-400);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.activity-content:hover {
+  background-color: var(--navy-800);
+}
+
+.activity-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-200);
+}
+
+.activity-title {
+  color: var(--white);
+  font-size: var(--text-preset-5);
+  font-weight: var(--font-medium);
+  line-height: var(--line-height-5);
+}
+
+.activity-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-100);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activity-menu:hover,
+.activity-menu:focus {
+  transform: scale(1.1);
+  outline: none;
+}
+
+.activity-menu img {
+  width: 21px;
+  height: 5px;
+  filter: brightness(0.8);
+  transition: filter 0.3s ease;
+}
+
+.activity-menu:hover img,
+.activity-menu:focus img {
+  filter: brightness(1.2);
+}
+
+.activity-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.current-time {
+  color: var(--white);
+  font-size: var(--text-preset-3);
+  font-weight: var(--font-light);
+  line-height: var(--line-height-3);
+}
+
+.previous-time {
+  color: var(--navy-200);
+  font-size: var(--text-preset-6);
+  font-weight: var(--font-regular);
+  line-height: var(--line-height-6);
+}
+
+/* Tablet Layout */
+@media (min-width: 768px) {
+  .dashboard {
+    padding: var(--spacing-400);
+    gap: var(--spacing-400);
+  }
+
+  .profile-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-header {
+    order: 2;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .time-selector {
+    order: 1;
+    background-color: var(--navy-900);
+    border-radius: 15px 15px 0 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-400);
+    padding: var(--spacing-300) var(--spacing-400);
+  }
+
+  .activities-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-400);
+  }
+
+  .current-time {
+    font-size: var(--text-preset-2);
+    line-height: var(--line-height-2);
+  }
+}
+
+/* Desktop Layout */
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .dashboard {
+    padding: var(--spacing-400);
+    display: grid;
+    grid-template-columns: 255px 764px;
+    grid-template-rows: 520px;
+    gap: var(--spacing-400);
+    align-items: start;
+    min-height: auto;
+    margin: auto;
+    width: 1115px;
+  }
+
+  .attribution {
+    margin-top: auto;
+    padding: var(--spacing-300);
+  }
+
+  .profile-card {
+    grid-row: 1;
+    display: block;
+    width: 255px;
+    height: 520px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: var(--spacing-400);
+    border-radius: 15px;
+    order: initial;
+  }
+
+  .profile-avatar {
+    width: 78px;
+    height: 78px;
+    margin-bottom: var(--spacing-500);
+  }
+
+  .profile-name {
+    font-size: 40px;
+    line-height: 47px;
+    font-weight: var(--font-light);
+  }
+
+  .time-selector {
+    background-color: transparent;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-200);
+    padding: var(--spacing-300) var(--spacing-400) var(--spacing-400);
+    border-radius: 0;
+    order: initial;
+  }
+
+  .activities-grid {
+    grid-template-columns: repeat(3, 244px);
+    grid-template-rows: 244px 244px;
+    gap: var(--spacing-400);
+    height: 520px;
+  }
+
+  .activity-card {
+    width: 244px;
+    height: 244px;
+  }
+
+  .activity-title {
+    font-size: 18px;
+    font-weight: var(--font-medium);
+    line-height: 21px;
+  }
+
+  .previous-time {
+    font-size: 15px;
+    font-weight: var(--font-regular);
+    line-height: 18px;
+  }
+
+  .activity-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-100);
+  }
+
+  .current-time {
+    font-size: 56px;
+    line-height: 66px;
+    font-weight: var(--font-light);
+  }
+}
+
+/* Attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: var(--spacing-300);
+  color: var(--purple-500);
+}
+
+.attribution a {
+  color: var(--purple-600);
+}
